@@ -1,0 +1,375 @@
+{
+  "id": "03-station",
+  "order": 3,
+  "titleJa": "駅前で道を聞く",
+  "titleZh": "車站問路實戰",
+  "subtitleZh": "問出口與月台位置、聽懂左右直走指引，一次分清助詞「で」與「に」",
+  "locationTag": "JR 東京站周邊",
+  "sceneTheme": "station",
+  "npcName": "中村（なかむら）",
+  "npcRoleZh": "熱心通勤族 / 站務指引",
+  "npcAvatar": "commuter",
+  "grammarFocus": ["〜はどこですか", "交通工具「で」", "目的地／存在「に」", "歩いて五分"],
+  "startNodeId": "s1",
+  "nodes": [
+    {
+      "id": "s1",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "あ、はい。" },
+        { "text": "どうしましたか。" }
+      ],
+      "npcZh": "啊、嗨，請問有什麼事嗎？",
+      "ttsText": "あ、はい。どうしましたか。",
+      "audioId": "station-s1",
+      "nextNodeId": "s2",
+      "challenge": {
+        "type": "clause-builder",
+        "promptZh": "請問路人：「不好意思，請問車站在哪裡？」",
+        "correctOrder": ["b1", "b2", "b3"],
+        "blocks": [
+          { "id": "b1", "tokens": [{ "text": "すみません、", "vocabId": "sumimasen" }] },
+          { "id": "b2", "tokens": [{ "text": "駅", "reading": "えき", "vocabId": "eki" }, { "text": "は" }] },
+          { "id": "b3", "tokens": [{ "text": "どこ", "vocabId": "doko" }, { "text": "ですか。" }] },
+          { "id": "d1", "tokens": [{ "text": "いくら", "vocabId": "ikura" }, { "text": "ですか。" }], "isDistractor": true }
+        ],
+        "grammarTipId": "doko-desuka",
+        "targetVocabIds": ["eki", "doko"],
+        "feedbackSuccessZh": "清楚明瞭！「〇〇はどこですか」是問路第一名句型。",
+        "feedbackWrongZh": "問「在哪裡」要用「どこですか」，「いくら」是問價錢喔。"
+      }
+    },
+    {
+      "id": "s2",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "ここ", "vocabId": "koko" },
+        { "text": "を" },
+        { "text": "まっすぐ", "vocabId": "massugu" },
+        { "text": "行って、" },
+        { "text": "右", "reading": "みぎ", "vocabId": "migi" },
+        { "text": "に" },
+        { "text": "曲がってください。" }
+      ],
+      "npcZh": "沿著這裡直走，然後向右轉喔。",
+      "ttsText": "ここをまっすぐいって、みぎにまがってください。",
+      "audioId": "station-s2",
+      "nextNodeId": "s3",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "聽完指引，確認一下走法對不對：",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "まっすぐ", "vocabId": "massugu" },
+              { "text": "行って、" },
+              { "text": "右", "reading": "みぎ", "vocabId": "migi" },
+              { "text": "ですね。" }
+            ],
+            "correct": true,
+            "feedbackZh": "聽力抓得很準！「直走然後右轉對嗎」重複確認超有效！",
+            "nextNodeId": "s3"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "まっすぐ", "vocabId": "massugu" },
+              { "text": "行って、" },
+              { "text": "左", "reading": "ひだり", "vocabId": "hidari" },
+              { "text": "ですね。" }
+            ],
+            "correct": false,
+            "feedbackZh": "剛剛對方說的是「右（みぎ）」，不是「左（ひだり）」喔！再聽一次音檔確認。",
+            "wrongVocabIds": ["migi", "hidari"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "thinking",
+      "npcTokens": [
+        { "text": "はい、そうです。" },
+        { "text": "ちなみに、どこへ" },
+        { "text": "行きます", "reading": "いきます", "vocabId": "iku" },
+        { "text": "か。" }
+      ],
+      "npcZh": "對的！順便問一下，您要搭車去哪裡呢？",
+      "ttsText": "はい、そうです。ちなみに、どこへいきますか。",
+      "audioId": "station-s3",
+      "nextNodeId": "s4",
+      "challenge": {
+        "type": "cloze",
+        "promptZh": "回答對方：「我要搭電車去新宿。」（注意交通工具 vs 目的地）",
+        "beforeTokens": [
+          { "text": "電車", "reading": "でんしゃ", "vocabId": "densha" },
+          { "text": "で" },
+          { "text": "新宿", "reading": "しんじゅく", "vocabId": "shinjuku" }
+        ],
+        "afterTokens": [
+          { "text": "行きます", "reading": "いきます", "vocabId": "iku" },
+          { "text": "。" }
+        ],
+        "choices": [
+          {
+            "text": "に",
+            "correct": true,
+            "explanationZh": "答對！移動的目的地（新宿）後面用「に」，交通工具（電車）已經用了「で」。"
+          },
+          {
+            "text": "で",
+            "correct": false,
+            "explanationZh": "「で」是交通工具或動作場所，移動目的地要用「に」（或「へ」）。"
+          },
+          {
+            "text": "を",
+            "correct": false,
+            "explanationZh": "「行く」的目的地不能接「を」，請用「に」。"
+          }
+        ],
+        "grammarTipId": "ni-destination",
+        "targetVocabIds": ["densha", "shinjuku", "iku"]
+      }
+    },
+    {
+      "id": "s4",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "新宿", "reading": "しんじゅく", "vocabId": "shinjuku" },
+        { "text": "ですね。" },
+        { "text": "駅", "reading": "えき", "vocabId": "eki" },
+        { "text": "はとても" },
+        { "text": "近", "reading": "ちか", "vocabId": "chikai" },
+        { "text": "いですよ。" }
+      ],
+      "npcZh": "要去新宿啊，車站很近喔！",
+      "ttsText": "しんじゅくですね。えきはとてもちかいですよ。",
+      "audioId": "station-s4",
+      "nextNodeId": "s5",
+      "challenge": {
+        "type": "clause-builder",
+        "promptZh": "組出常見的距離說法：「到車站走路五分鐘。」",
+        "correctOrder": ["b1", "b2", "b3", "b4"],
+        "blocks": [
+          { "id": "b1", "tokens": [{ "text": "駅", "reading": "えき", "vocabId": "eki" }] },
+          { "id": "b2", "tokens": [{ "text": "まで", "vocabId": "made" }] },
+          { "id": "b3", "tokens": [{ "text": "歩いて", "reading": "あるいて", "vocabId": "aruite" }] },
+          { "id": "b4", "tokens": [{ "text": "五分", "reading": "ごふん", "vocabId": "gofun" }, { "text": "です。" }] },
+          { "id": "d2", "tokens": [{ "text": "から", "vocabId": "kara" }], "isDistractor": true }
+        ],
+        "grammarTipId": "kara-made",
+        "targetVocabIds": ["eki", "made", "aruite", "gofun"],
+        "feedbackSuccessZh": "沒錯！「駅まで歩いて五分です」就是旅遊書最常看到的路程寫法。",
+        "feedbackWrongZh": "「到車站為止」要用終點助詞「まで」，「から」是起點「從〜」喔。"
+      }
+    },
+    {
+      "id": "s5",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "ええ、そうです。" },
+        { "text": "左", "reading": "ひだり", "vocabId": "hidari" },
+        { "text": "側に" },
+        { "text": "改札", "reading": "かいさつ", "vocabId": "kaisatsu" },
+        { "text": "があって、" },
+        { "text": "乗り場", "reading": "のりば", "vocabId": "noriba" },
+        { "text": "は二番線です。" }
+      ],
+      "npcZh": "對的，左邊有剪票口，乘車處在二號月台。",
+      "ttsText": "ええ、そうです。ひだりがわにかいさつがあって、のりばはにばんせんです。",
+      "audioId": "station-s5",
+      "nextNodeId": "s6",
+      "challenge": {
+        "type": "cloze",
+        "promptZh": "複習「存在地點」的助詞：「左邊有剪票口。」",
+        "beforeTokens": [
+          { "text": "左側", "reading": "ひだりがわ", "vocabId": "hidari" }
+        ],
+        "afterTokens": [
+          { "text": "改札", "reading": "かいさつ", "vocabId": "kaisatsu" },
+          { "text": "があります。" }
+        ],
+        "choices": [
+          {
+            "text": "に",
+            "correct": true,
+            "explanationZh": "完全正確！「〜があります（存在）」前面的地點固定用「に」。"
+          },
+          {
+            "text": "で",
+            "correct": false,
+            "explanationZh": "「あります」表示靜態存在，不是動作，所以不能用「で」。"
+          },
+          {
+            "text": "を",
+            "correct": false,
+            "explanationZh": "「を」不能接在地點後面搭配「あります」。"
+          }
+        ],
+        "grammarTipId": "de-vs-ni",
+        "targetVocabIds": ["hidari", "kaisatsu"]
+      }
+    },
+    {
+      "id": "s6",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "happy",
+      "npcTokens": [
+        { "text": "出口", "reading": "でぐち", "vocabId": "deguchi" },
+        { "text": "の案内も見やすいので、すぐ分かりますよ！" }
+      ],
+      "npcZh": "出口標示也很清楚，您馬上就能找到的！",
+      "ttsText": "でぐちのあんないもみやすいので、すぐわかりますよ！",
+      "audioId": "station-s6",
+      "nextNodeId": "s6a",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "向熱心指路的對方道謝：",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "分かりました", "reading": "わかりました", "vocabId": "wakarimashita" },
+              { "text": "。" },
+              { "text": "ありがとうございます", "vocabId": "arigatou" },
+              { "text": "！" }
+            ],
+            "correct": true,
+            "feedbackZh": "禮貌得體！接著看對方補充的小提醒。",
+            "nextNodeId": "s6a"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "すみません、" },
+              { "text": "お名前", "reading": "おなまえ", "vocabId": "namae" },
+              { "text": "を" },
+              { "text": "お願", "reading": "おねが" },
+              { "text": "いします。" }
+            ],
+            "correct": false,
+            "feedbackZh": "哈哈，跟熱心路人道別不用要名字啦，說「ありがとうございます」就好！",
+            "wrongVocabIds": ["arigatou"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6a",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "thinking",
+      "npcTokens": [
+        { "text": "あ、" },
+        { "text": "急行", "reading": "きゅうこう" },
+        { "text": "だと" },
+        { "text": "次", "reading": "つぎ" },
+        { "text": "が" },
+        { "text": "新宿", "reading": "しんじゅく", "vocabId": "shinjuku" },
+        { "text": "なんですけど、" },
+        { "text": "各駅停車", "reading": "かくえきていしゃ" },
+        { "text": "だと三つ目ですよ！" }
+      ],
+      "npcZh": "啊，如果是搭急行下一站就是新宿，但各站皆停的話是第三站喔！",
+      "ttsText": "あ、きゅうこうだとつぎがしんじゅくなんですけど、かくえきていしゃだとみっつめですよ！",
+      "audioId": "station-s6a",
+      "nextNodeId": "s6b",
+      "challenge": {
+        "type": "clause-builder",
+        "promptZh": "生活實用請求：對方講太快了，請對方「再說慢一點」：",
+        "correctOrder": ["b1", "b2", "b3"],
+        "blocks": [
+          { "id": "b1", "tokens": [{ "text": "もう少し", "reading": "もうすこし", "vocabId": "mou_sukoshi" }] },
+          { "id": "b2", "tokens": [{ "text": "ゆっくり", "vocabId": "yukkuri" }] },
+          { "id": "b3", "tokens": [{ "text": "話してください。", "reading": "はなしてください", "vocabId": "hanasu" }] },
+          { "id": "d1", "tokens": [{ "text": "はやく" }], "isDistractor": true }
+        ],
+        "grammarTipId": "te-kudasai",
+        "targetVocabIds": ["mou_sukoshi", "yukkuri", "hanasu"],
+        "feedbackSuccessZh": "這句超救命！遇到日本店員講太快，用「もう少しゆっくり話してください」對方都會放慢速度！",
+        "feedbackWrongZh": "要說「慢一點」是用「ゆっくり」，「はやく」是「快一點」喔。"
+      }
+    },
+    {
+      "id": "s6b",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "ごめんなさい、" },
+        { "text": "早", "reading": "はや" },
+        { "text": "かったですよね！" },
+        { "text": "急行", "reading": "きゅうこう" },
+        { "text": "に乗ると" },
+        { "text": "早", "reading": "はや" },
+        { "text": "いですよ。" }
+      ],
+      "npcZh": "抱歉我剛剛講太快了！搭急行列車比較快喔。",
+      "ttsText": "ごめんなさい、はやかったですよね！きゅうこうにのるとはやいですよ。",
+      "audioId": "station-s6b",
+      "nextNodeId": "s7",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "聽懂後向熱心的路人表達「真是幫大忙了！謝謝您！」：",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "助かりました", "reading": "たすかりました", "vocabId": "tasukarimashita" },
+              { "text": "！" },
+              { "text": "ありがとうございます", "vocabId": "arigatou" },
+              { "text": "。" }
+            ],
+            "correct": true,
+            "feedbackZh": "「助かりました！」是日本人受到幫忙時最常說的道謝語，地道滿分！",
+            "nextNodeId": "s7"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "ごちそうさまでした！" }
+            ],
+            "correct": false,
+            "feedbackZh": "「ごちそうさまでした」是吃完飯對餐廳或請客的人說的「謝謝招待」喔！",
+            "wrongVocabIds": ["tasukarimashita"]
+          },
+          {
+            "id": "opt3",
+            "tokens": [
+              { "text": "おじゃまします！" }
+            ],
+            "correct": false,
+            "feedbackZh": "「おじゃまします」是進別人家門時說的「打擾了」喔！",
+            "wrongVocabIds": ["tasukarimashita"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "s7",
+      "speaker": "中村",
+      "speakerVoice": "nanami",
+      "expression": "happy",
+      "npcTokens": [
+        { "text": "どういたしまして！" },
+        { "text": "気をつけて行ってきてくださいね。" }
+      ],
+      "npcZh": "不客氣！路上小心、玩得開心喔！",
+      "ttsText": "どういたしまして！きをつけていってきてくださいね。",
+      "audioId": "station-s7",
+      "isEnd": true
+    }
+  ]
+}

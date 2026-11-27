@@ -1,0 +1,399 @@
+{
+  "id": "02-drugstore",
+  "order": 2,
+  "titleJa": "ドラッグストア",
+  "titleZh": "藥妝店採買",
+  "subtitleZh": "詢問商品位置、用萬用個數詞買兩件、免稅與信用卡結帳一次學會",
+  "locationTag": "渋谷・藥妝店",
+  "sceneTheme": "drugstore",
+  "npcName": "高橋（たかはし）",
+      "npcRoleZh": "藥妝店店員",
+  "npcAvatar": "drugstore-staff",
+  "grammarFocus": ["〜はありますか", "〜をください", "量詞：ひとつ・ふたつ", "〜で払います"],
+  "startNodeId": "d1",
+  "nodes": [
+    {
+      "id": "d1",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "いらっしゃいませ！" },
+        { "text": "何", "reading": "なに" },
+        { "text": "かお" },
+        { "text": "探", "reading": "さが" },
+        { "text": "しですか。" }
+      ],
+      "npcZh": "歡迎光臨！請問您在找什麼商品嗎？",
+      "ttsText": "いらっしゃいませ！なにかおさがしですか。",
+      "audioId": "drug-d1",
+      "nextNodeId": "d2",
+      "challenge": {
+        "type": "clause-builder",
+        "promptZh": "請問店員：「不好意思，請問有賣眼藥水嗎？」",
+        "correctOrder": ["b1", "b2", "b3"],
+        "blocks": [
+          { "id": "b1", "tokens": [{ "text": "すみません、", "vocabId": "sumimasen" }] },
+          { "id": "b2", "tokens": [{ "text": "目薬", "reading": "めぐすり", "vocabId": "megusuri" }, { "text": "は" }] },
+          { "id": "b3", "tokens": [{ "text": "ありますか。" }] },
+          { "id": "dx", "tokens": [{ "text": "いますか。" }], "isDistractor": true }
+        ],
+        "grammarTipId": "wa-vs-ga",
+        "targetVocabIds": ["megusuri"],
+        "feedbackSuccessZh": "正確！無生命物品（藥水、飲料等）存在與否一律用「ありますか」，「いますか」只用於人或動物。",
+        "feedbackWrongZh": "物品存在要用「ありますか」，「いますか」是用在有生命的動物或人身上喔。"
+      }
+    },
+    {
+      "id": "d2",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "はい、" },
+        { "text": "目薬", "reading": "めぐすり", "vocabId": "megusuri" },
+        { "text": "はこちらです。" },
+        { "text": "こちらが" },
+        { "text": "安", "reading": "やす", "vocabId": "yasui" },
+        { "text": "いですよ。" }
+      ],
+      "npcZh": "有的，眼藥水在這裡。這款比較便宜喔。",
+      "ttsText": "はい、めぐすりはこちらです。こちらがやすいですよ。",
+      "audioId": "drug-d2",
+      "nextNodeId": "d3",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "想確認價格時，該怎麼問最準確？",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "すみません、これは" },
+              { "text": "いくら", "vocabId": "ikura" },
+              { "text": "ですか。" }
+            ],
+            "correct": true,
+            "feedbackZh": "Bingo！「いくらですか」＝多少錢！",
+            "nextNodeId": "d3"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "これは" },
+              { "text": "どこ", "vocabId": "doko" },
+              { "text": "ですか。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「どこですか」是在問「在哪裡」，問價錢要用「いくら」。",
+            "wrongVocabIds": ["ikura", "doko"]
+          },
+          {
+            "id": "opt3",
+            "tokens": [
+              { "text": "これは" },
+              { "text": "何時", "reading": "なんじ", "vocabId": "nanji" },
+              { "text": "ですか。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「何時ですか」是問幾點，問金額要用「いくら」。",
+            "wrongVocabIds": ["ikura", "nanji"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "d3",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "一つ", "reading": "ひとつ", "vocabId": "hitotsu" },
+        { "text": "五百円", "reading": "ごひゃくえん" },
+        { "text": "です。" },
+        { "text": "おいくつにしますか。" }
+      ],
+      "npcZh": "一個是 500 日圓。請問您要幾個呢？",
+      "ttsText": "ひとつごひゃくえんです。おいくつにしますか。",
+      "audioId": "drug-d3",
+      "nextNodeId": "d4",
+      "challenge": {
+        "type": "cloze",
+        "promptZh": "你想買「兩個」送朋友，補上正確詞語：",
+        "beforeTokens": [
+          { "text": "これを" }
+        ],
+        "afterTokens": [
+          { "text": "ください。", "vocabId": "kudasai" }
+        ],
+        "choices": [
+          {
+            "text": "二つ",
+            "reading": "ふたつ",
+            "correct": true,
+            "explanationZh": "答對了！「これを二つください」＝「請給我兩個這個」。"
+          },
+          {
+            "text": "二泊",
+            "reading": "にはく",
+            "correct": false,
+            "explanationZh": "「二泊」是住宿兩晚的量詞，買物品個數要用「二つ（ふたつ）」。"
+          },
+          {
+            "text": "二階",
+            "reading": "にかい",
+            "correct": false,
+            "explanationZh": "「二階」是指二樓，數量兩個請用「二つ」。"
+          }
+        ],
+        "grammarTipId": "counters-basic",
+        "targetVocabIds": ["futatsu", "kudasai"]
+      }
+    },
+    {
+      "id": "d4",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "はい、" },
+        { "text": "日焼け止め", "reading": "ひやけどめ", "vocabId": "hiyakedome" },
+        { "text": "もいっしょにどうぞ。" },
+        { "text": "レジへどうぞ。" }
+      ],
+      "npcZh": "好的，防曬乳也幫您一起算。請往結帳櫃檯。",
+      "ttsText": "はい、ひやけどめもいっしょにどうぞ。レジへどうぞ。",
+      "audioId": "drug-d4",
+      "nextNodeId": "d5",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "結帳前想問店員「請問可以免稅嗎？」",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "免税", "reading": "めんぜい", "vocabId": "menzei" },
+              { "text": "はできますか。" }
+            ],
+            "correct": true,
+            "feedbackZh": "超實用！「免税（めんぜい）はできますか」日本藥妝店必背一句！",
+            "nextNodeId": "d5"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "免税", "reading": "めんぜい", "vocabId": "menzei" },
+              { "text": "をください。" }
+            ],
+            "correct": false,
+            "feedbackZh": "免稅是一項服務不是商品，問「可不可以」要說「できますか」。",
+            "wrongVocabIds": ["menzei"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "d5",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "はい、" },
+        { "text": "免税", "reading": "めんぜい", "vocabId": "menzei" },
+        { "text": "できますよ。" },
+        { "text": "お支払いはどうなさいますか。" }
+      ],
+      "npcZh": "可以免稅喔！請問您要怎麼付款呢？",
+      "ttsText": "はい、めんぜいできますよ。おしはらいはどうなさいますか。",
+      "audioId": "drug-d5",
+      "nextNodeId": "d6",
+      "challenge": {
+        "type": "cloze",
+        "promptZh": "用正確助詞說「我要用信用卡付款。」",
+        "beforeTokens": [
+          { "text": "クレジットカード", "vocabId": "credit_card" }
+        ],
+        "afterTokens": [
+          { "text": "払います", "reading": "はらいます", "vocabId": "harau" },
+          { "text": "。" }
+        ],
+        "choices": [
+          {
+            "text": "で",
+            "correct": true,
+            "explanationZh": "正確！付款方式與工具手段（信用卡、現金、Suica）一律用「で」。"
+          },
+          {
+            "text": "に",
+            "correct": false,
+            "explanationZh": "「に」表示目的地或時間點，手段工具不能用「に」。"
+          },
+          {
+            "text": "を",
+            "correct": false,
+            "explanationZh": "「を」用在「払う（支付的錢）」，信用卡作為付款「工具」要接「で」。"
+          }
+        ],
+        "grammarTipId": "de-means",
+        "targetVocabIds": ["credit_card", "harau"]
+      }
+    },
+    {
+      "id": "d6",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "かしこまりました。" },
+        { "text": "袋", "reading": "ふくろ", "vocabId": "fukuro" },
+        { "text": "はいりますか。" }
+      ],
+      "npcZh": "好的。請問需要購物袋嗎？",
+      "ttsText": "かしこまりました。ふくろはいりますか。",
+      "audioId": "drug-d6",
+      "nextNodeId": "d6a",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "你自備了環保袋，該怎麼禮貌回答「不用袋子」？",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "いいえ、" },
+              { "text": "大丈夫", "reading": "だいじょうぶ", "vocabId": "daijoubu" },
+              { "text": "です。" },
+              { "text": "いりません", "vocabId": "irimasen" },
+              { "text": "。" }
+            ],
+            "correct": true,
+            "feedbackZh": "100 分！講「大丈夫です」或「いりません」店員馬上秒懂。",
+            "nextNodeId": "d6a"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "はい、" },
+              { "text": "お願", "reading": "おねが" },
+              { "text": "いします。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「はい、お願いします」會變成「好的，我要袋子」喔！",
+            "wrongVocabIds": ["fukuro", "irimasen"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "d6a",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "あ、" },
+        { "text": "パスポート", "vocabId": "passport" },
+        { "text": "も見せてくださいね。" }
+      ],
+      "npcZh": "啊，辦理免稅也請出示一下您的護照喔。",
+      "ttsText": "あ、パスポートもみせてくださいね。",
+      "audioId": "drug-d6a",
+      "nextNodeId": "d6b",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "還在翻包包找護照，先請店員「不好意思，請稍等一下」：",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "すみません、", "vocabId": "sumimasen" },
+              { "text": "ちょっと待ってください。", "reading": "ちょっとまってください", "vocabId": "chotto_matte" }
+            ],
+            "correct": true,
+            "feedbackZh": "超自然！結帳翻錢包、找手機條碼時「ちょっと待ってください」必用！",
+            "nextNodeId": "d6b"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "もう一度", "reading": "もういちど", "vocabId": "mou_ichido" },
+              { "text": "お願いします。", "reading": "おねがいします", "vocabId": "onegaishimasu" }
+            ],
+            "correct": false,
+            "feedbackZh": "「もう一度お願いします」是請對方「再說一次」，翻包包請人等一下要說「ちょっと待ってください」。",
+            "wrongVocabIds": ["chotto_matte", "mou_ichido"]
+          },
+          {
+            "id": "opt3",
+            "tokens": [
+              { "text": "助かりました", "reading": "たすかりました", "vocabId": "tasukarimashita" },
+              { "text": "。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「助かりました」是受到幫助時說「幫大忙了」，這裡要先請店員稍等。",
+            "wrongVocabIds": ["chotto_matte", "tasukarimashita"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "d6b",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "はい、" },
+        { "text": "ゆっくり", "vocabId": "yukkuri" },
+        { "text": "で" },
+        { "text": "大丈夫", "reading": "だいじょうぶ", "vocabId": "daijoubu" },
+        { "text": "ですよ。" },
+        { "text": "ほかに何かありますか。" }
+      ],
+      "npcZh": "好的，慢慢來沒關係喔。請問還有什麼需要嗎？",
+      "ttsText": "はい、ゆっくりでだいじょうぶですよ。ほかになにかありますか。",
+      "audioId": "drug-d6b",
+      "nextNodeId": "d7",
+      "challenge": {
+        "type": "cloze",
+        "promptZh": "生活實用問句：想幫朋友拍商品照確認，補上助詞「請問可以拍照嗎？」",
+        "beforeTokens": [
+          { "text": "写真", "reading": "しゃしん", "vocabId": "shashin" }
+        ],
+        "afterTokens": [
+          { "text": "撮っても", "reading": "とっても", "vocabId": "toru" },
+          { "text": "いいですか。" }
+        ],
+        "choices": [
+          {
+            "text": "を",
+            "correct": true,
+            "explanationZh": "答對！拍照「写真を撮る（しゃしんをとる）」的受詞用「を」。"
+          },
+          {
+            "text": "に",
+            "correct": false,
+            "explanationZh": "「照片」是「拍（撮る）」的對象，要用受詞助詞「を」喔。"
+          },
+          {
+            "text": "で",
+            "correct": false,
+            "explanationZh": "「で」表示工具或場所，受詞（拍照的對象）要用「を」。"
+          }
+        ],
+        "grammarTipId": "temo-iidesuka",
+        "targetVocabIds": ["shashin", "toru"]
+      }
+    },
+    {
+      "id": "d7",
+      "speaker": "高橋",
+      "speakerVoice": "keita",
+      "expression": "happy",
+      "npcTokens": [
+        { "text": "ありがとうございました！" },
+        { "text": "またお越しくださいませ。" }
+      ],
+      "npcZh": "非常感謝您的惠顧，歡迎再度光臨！",
+      "ttsText": "ありがとうございました！またおこしくださいませ。",
+      "audioId": "drug-d7",
+      "isEnd": true
+    }
+  ]
+}

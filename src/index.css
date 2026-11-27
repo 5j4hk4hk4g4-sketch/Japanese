@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --bg-paper: #FFF8F0;
+  --bg-shell: #F4EDE2;
+  --ink: #1F2430;
+  --ink-muted: #5C6475;
+  --vermilion: #E0523D;
+  --matcha: #2E8B57;
+  --indigo: #2C497F;
+  --gold: #D99226;
+}
+
+body {
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-shell);
+  color: var(--ink);
+}
+
+.font-jp {
+  font-family: 'Noto Sans JP', 'Zen Maru Gothic', system-ui, sans-serif;
+}
+
+ruby {
+  ruby-align: center;
+}
+
+ruby rt {
+  font-size: 0.58em;
+  line-height: 1.1;
+  color: currentColor;
+  opacity: 0.72;
+  font-weight: 500;
+  user-select: none;
+}
+
+@keyframes floatSlow {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 3.6s ease-in-out infinite;
+}
+
+.animate-pop-in {
+  animation: popIn 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}

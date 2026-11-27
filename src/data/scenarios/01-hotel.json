@@ -1,0 +1,343 @@
+{
+  "id": "01-hotel",
+  "order": 1,
+  "titleJa": "ホテル チェックイン",
+  "titleZh": "飯店 Check-in",
+  "subtitleZh": "抵達東京第一站！完成訂房確認、出示護照與確認早餐時間",
+  "locationTag": "東京・新宿飯店櫃檯",
+  "sceneTheme": "hotel",
+  "npcName": "佐藤（さとう）",
+  "npcRoleZh": "飯店櫃檯人員",
+  "npcAvatar": "hotel-staff",
+  "grammarFocus": ["〜をお願いします", "〜から〜まで", "量詞：二泊／五階"],
+  "startNodeId": "h1",
+  "nodes": [
+    {
+      "id": "h1",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "いらっしゃいませ。" },
+        { "text": "こんにちは！" }
+      ],
+      "npcZh": "歡迎光臨，您好！",
+      "ttsText": "いらっしゃいませ。こんにちは！",
+      "audioId": "hotel-h1",
+      "nextNodeId": "h2",
+      "challenge": {
+        "type": "clause-builder",
+        "promptZh": "請跟櫃檯人員說：「不好意思，麻煩辦理入住。」",
+        "correctOrder": ["b1", "b2", "b3"],
+        "blocks": [
+          { "id": "b1", "tokens": [{ "text": "すみません、", "vocabId": "sumimasen" }] },
+          { "id": "b2", "tokens": [{ "text": "チェックインを" }] },
+          { "id": "b3", "tokens": [{ "text": "お願いします。", "reading": "おねがいします", "vocabId": "onegaishimasu" }] },
+          { "id": "d1", "tokens": [{ "text": "チェックインが" }], "isDistractor": true }
+        ],
+        "grammarTipId": "wo-object",
+        "targetVocabIds": ["sumimasen", "onegaishimasu"],
+        "feedbackSuccessZh": "漂亮！請求對方辦理手續時，用「〜をお願いします」最自然。",
+        "feedbackWrongZh": "「チェックイン（辦理入住）」是動作對象，要用助詞「を」接「お願いします」喔。"
+      }
+    },
+    {
+      "id": "h2",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "かしこまりました。" },
+        { "text": "お名前", "reading": "おなまえ", "vocabId": "namae" },
+        { "text": "と" },
+        { "text": "パスポート", "vocabId": "passport" },
+        { "text": "を" },
+        { "text": "お願", "reading": "おねが" },
+        { "text": "いします。" }
+      ],
+      "npcZh": "好的沒問題。麻煩請提供您的大名與護照。",
+      "ttsText": "かしこまりました。おなまえとパスポートをおねがいします。",
+      "audioId": "hotel-h2",
+      "nextNodeId": "h3",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "聽懂櫃檯的要求，選出最合適的回答：",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "予約", "reading": "よやく", "vocabId": "yoyaku" },
+              { "text": "した" },
+              { "text": "田中", "reading": "たなか" },
+              { "text": "です。" },
+              { "text": "どうぞ。" }
+            ],
+            "correct": true,
+            "feedbackZh": "太棒了！「予約した〇〇です」是報上訂房姓名的超實用句型。",
+            "nextNodeId": "h3"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "パスポートは" },
+              { "text": "いりません", "vocabId": "irimasen" },
+              { "text": "。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「いりません」是「不需要」的意思喔！櫃檯是要看護照，不是推銷東西。",
+            "wrongVocabIds": ["passport", "irimasen"]
+          },
+          {
+            "id": "opt3",
+            "tokens": [
+              { "text": "お名前", "reading": "おなまえ", "vocabId": "namae" },
+              { "text": "は" },
+              { "text": "何時", "reading": "なんじ", "vocabId": "nanji" },
+              { "text": "ですか。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「何時ですか」是在問幾點喔，這裡櫃檯是在問你的名字與護照。",
+            "wrongVocabIds": ["namae", "nanji"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "h3",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "田中", "reading": "たなか" },
+        { "text": "様ですね。" },
+        { "text": "今日", "reading": "きょう" },
+        { "text": "から" },
+        { "text": "二泊", "reading": "にはく", "vocabId": "nihaku" },
+        { "text": "ですね。" },
+        { "text": "お部屋", "reading": "おへや", "vocabId": "heya" },
+        { "text": "は" },
+        { "text": "五階", "reading": "ごかい", "vocabId": "kai" },
+        { "text": "です。" }
+      ],
+      "npcZh": "田中先生／小姐對嗎？從今天起住兩晚對吧？您的房間在五樓。",
+      "ttsText": "たなかさまですね。きょうからにはくですね。おへやはごかいです。",
+      "audioId": "hotel-h3",
+      "nextNodeId": "h4",
+      "challenge": {
+        "type": "cloze",
+        "promptZh": "補上助詞，回答：「是的，從今天起住兩晚。」",
+        "beforeTokens": [
+          { "text": "はい、" },
+          { "text": "今日", "reading": "きょう" }
+        ],
+        "afterTokens": [
+          { "text": "二泊", "reading": "にはく", "vocabId": "nihaku" },
+          { "text": "です。" }
+        ],
+        "choices": [
+          {
+            "text": "から",
+            "correct": true,
+            "explanationZh": "正確！「今日から」表示「從今天開始」。"
+          },
+          {
+            "text": "まで",
+            "correct": false,
+            "explanationZh": "「まで」是「到〜為止」，這裡要說「從今天起」應該用「から」。"
+          },
+          {
+            "text": "を",
+            "correct": false,
+            "explanationZh": "「を」接動作受詞，不表示時間起點「從〜」。"
+          }
+        ],
+        "grammarTipId": "kara-made",
+        "targetVocabIds": ["kara", "nihaku"]
+      }
+    },
+    {
+      "id": "h4",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "happy",
+      "npcTokens": [
+        { "text": "こちらが" },
+        { "text": "部屋", "reading": "へや", "vocabId": "heya" },
+        { "text": "の" },
+        { "text": "鍵", "reading": "かぎ", "vocabId": "kagi" },
+        { "text": "です。" },
+        { "text": "ごゆっくりどうぞ。" }
+      ],
+      "npcZh": "這張是您的房卡，請好好休息。",
+      "ttsText": "こちらがへやのかぎです。ごゆっくりどうぞ。",
+      "audioId": "hotel-h4",
+      "nextNodeId": "h5",
+      "challenge": {
+        "type": "clause-builder",
+        "promptZh": "順便問一下：「請問早餐是從幾點開始？」",
+        "correctOrder": ["c1", "c2", "c3", "c4"],
+        "blocks": [
+          { "id": "c1", "tokens": [{ "text": "朝ご飯", "reading": "あさごはん", "vocabId": "asagohan" }, { "text": "は" }] },
+          { "id": "c2", "tokens": [{ "text": "何時", "reading": "なんじ", "vocabId": "nanji" }] },
+          { "id": "c3", "tokens": [{ "text": "から", "vocabId": "kara" }] },
+          { "id": "c4", "tokens": [{ "text": "ですか。" }] },
+          { "id": "d2", "tokens": [{ "text": "まで", "vocabId": "made" }], "isDistractor": true }
+        ],
+        "grammarTipId": "kara-made",
+        "targetVocabIds": ["asagohan", "nanji", "kara"],
+        "feedbackSuccessZh": "完美！「何時からですか」在飯店與逛街問營業時間都超好用！",
+        "feedbackWrongZh": "問「從幾點開始」要用「何時からですか」，「まで」則是問到幾點結束。"
+      }
+    },
+    {
+      "id": "h5",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "朝ご飯", "reading": "あさごはん", "vocabId": "asagohan" },
+        { "text": "は" },
+        { "text": "七時", "reading": "しちじ" },
+        { "text": "から", "vocabId": "kara" },
+        { "text": "九時", "reading": "くじ" },
+        { "text": "まで", "vocabId": "made" },
+        { "text": "です。" },
+        { "text": "二階", "reading": "にかい", "vocabId": "kai" },
+        { "text": "です。" }
+      ],
+      "npcZh": "早餐是七點到九點，在二樓用餐。",
+      "ttsText": "あさごはんはしちじからくじまでです。にかいです。",
+      "audioId": "hotel-h5",
+      "nextNodeId": "h5a",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "聽完時間與樓層，禮貌地回應並道謝：",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "分かりました", "reading": "わかりました", "vocabId": "wakarimashita" },
+              { "text": "。" },
+              { "text": "ありがとうございます", "vocabId": "arigatou" },
+              { "text": "。" }
+            ],
+            "correct": true,
+            "feedbackZh": "自然得體！繼續最後的日常溝通確認。",
+            "nextNodeId": "h5a"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "いいえ、" },
+              { "text": "大丈夫", "reading": "だいじょうぶ", "vocabId": "daijoubu" },
+              { "text": "です。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「いいえ、大丈夫です」常用來婉拒提議，聽懂對方說明時要說「分かりました」。",
+            "wrongVocabIds": ["wakarimashita", "daijoubu"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "h5a",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "neutral",
+      "npcTokens": [
+        { "text": "無料", "reading": "むりょう" },
+        { "text": "Wi-Fiのパスワードは" },
+        { "text": "部屋", "reading": "へや", "vocabId": "heya" },
+        { "text": "の" },
+        { "text": "紙", "reading": "かみ" },
+        { "text": "に書いてありますよ。" }
+      ],
+      "npcZh": "免費 Wi-Fi 密碼寫在房間的說明紙上喔。",
+      "ttsText": "むりょうワイファイのパスワードはへやのかみにかいてありますよ。",
+      "audioId": "hotel-h5a",
+      "nextNodeId": "h5b",
+      "challenge": {
+        "type": "choice",
+        "promptZh": "日常必備救命句：沒聽清楚剛剛那句，請對方「再說一次」：",
+        "options": [
+          {
+            "id": "opt1",
+            "tokens": [
+              { "text": "すみません、", "vocabId": "sumimasen" },
+              { "text": "もう一度", "reading": "もういちど", "vocabId": "mou_ichido" },
+              { "text": "お願いします。", "reading": "おねがいします", "vocabId": "onegaishimasu" }
+            ],
+            "correct": true,
+            "feedbackZh": "超實用！「もう一度お願いします」幾乎在日本任何場合都救得了你！",
+            "nextNodeId": "h5b"
+          },
+          {
+            "id": "opt2",
+            "tokens": [
+              { "text": "ちょっと待ってください。", "vocabId": "chotto_matte" }
+            ],
+            "correct": false,
+            "feedbackZh": "「ちょっと待ってください」是請對方「稍等一下」，請對方重講一次要說「もう一度」。",
+            "wrongVocabIds": ["mou_ichido", "chotto_matte"]
+          },
+          {
+            "id": "opt3",
+            "tokens": [
+              { "text": "いいえ、" },
+              { "text": "いりません", "vocabId": "irimasen" },
+              { "text": "。" }
+            ],
+            "correct": false,
+            "feedbackZh": "「いりません」是「不需要」，這裡是想請對方再重複一次。",
+            "wrongVocabIds": ["mou_ichido", "irimasen"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "h5b",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "smile",
+      "npcTokens": [
+        { "text": "はい、Wi-Fiは" },
+        { "text": "部屋", "reading": "へや", "vocabId": "heya" },
+        { "text": "に書いてあります。" },
+        { "text": "ほかに何かありますか。" }
+      ],
+      "npcZh": "好的，Wi-Fi 密碼寫在房間裡喔。請問還有其他需要嗎？",
+      "ttsText": "はい、ワイファイはへやにかいてあります。ほかになにかありますか。",
+      "audioId": "hotel-h5b",
+      "nextNodeId": "h6",
+      "challenge": {
+        "type": "clause-builder",
+        "promptZh": "生活實用請求：問櫃檯「請問可以寄放行李嗎？」",
+        "correctOrder": ["b1", "b2", "b3"],
+        "blocks": [
+          { "id": "b1", "tokens": [{ "text": "荷物", "reading": "にもつ", "vocabId": "nimotsu" }, { "text": "を" }] },
+          { "id": "b2", "tokens": [{ "text": "預けて", "reading": "あずけて", "vocabId": "azukeru" }] },
+          { "id": "b3", "tokens": [{ "text": "もいいですか。" }] },
+          { "id": "d1", "tokens": [{ "text": "預けに", "reading": "あずけに" }], "isDistractor": true }
+        ],
+        "grammarTipId": "temo-iidesuka",
+        "targetVocabIds": ["nimotsu", "azukeru"],
+        "feedbackSuccessZh": "漂亮！「〜てもいいですか」用來禮貌請求許可，退房後寄放行李超好用！",
+        "feedbackWrongZh": "請求許可要用「動詞て形（預けて）＋ もいいですか」喔。"
+      }
+    },
+    {
+      "id": "h6",
+      "speaker": "佐藤",
+      "speakerVoice": "nanami",
+      "expression": "happy",
+      "npcTokens": [
+        { "text": "いってらっしゃいませ！" },
+        { "text": "ごゆっくりお過ごしください。" }
+      ],
+      "npcZh": "祝您有個愉快的東京之旅，請慢走！",
+      "ttsText": "いってらっしゃいませ！ごゆっくりおすごしください。",
+      "audioId": "hotel-h6",
+      "isEnd": true
+    }
+  ]
+}

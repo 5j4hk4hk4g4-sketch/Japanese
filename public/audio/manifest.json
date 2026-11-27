@@ -1,0 +1,482 @@
+{
+  "hotel-h1": {
+    "file": "hotel-h1.mp3",
+    "hash": "230977937a7b",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "いらっしゃいませ。こんにちは！"
+  },
+  "hotel-h2": {
+    "file": "hotel-h2.mp3",
+    "hash": "37802ff8ce20",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "かしこまりました。おなまえとパスポートをおねがいします。"
+  },
+  "hotel-h3": {
+    "file": "hotel-h3.mp3",
+    "hash": "6ab773a1efc2",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "たなかさまですね。きょうからにはくですね。おへやはごかいです。"
+  },
+  "hotel-h4": {
+    "file": "hotel-h4.mp3",
+    "hash": "92fac3983aef",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "こちらがへやのかぎです。ごゆっくりどうぞ。"
+  },
+  "hotel-h5": {
+    "file": "hotel-h5.mp3",
+    "hash": "4d5828c29047",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "あさごはんはしちじからくじまでです。にかいです。"
+  },
+  "hotel-h6": {
+    "file": "hotel-h6.mp3",
+    "hash": "a734042f9c17",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "いってらっしゃいませ！ごゆっくりおすごしください。"
+  },
+  "drug-d1": {
+    "file": "drug-d1.mp3",
+    "hash": "1818d6f8efd7",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "いらっしゃいませ！なにかおさがしですか。"
+  },
+  "drug-d2": {
+    "file": "drug-d2.mp3",
+    "hash": "363fdf9e17fe",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "はい、めぐすりはこちらです。こちらがやすいですよ。"
+  },
+  "drug-d3": {
+    "file": "drug-d3.mp3",
+    "hash": "f4123e06aa02",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "ひとつごひゃくえんです。おいくつにしますか。"
+  },
+  "drug-d4": {
+    "file": "drug-d4.mp3",
+    "hash": "024c289c9be1",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "はい、ひやけどめもいっしょにどうぞ。レジへどうぞ。"
+  },
+  "drug-d5": {
+    "file": "drug-d5.mp3",
+    "hash": "3db4e088bdac",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "はい、めんぜいできますよ。おしはらいはどうなさいますか。"
+  },
+  "drug-d6": {
+    "file": "drug-d6.mp3",
+    "hash": "02b3fea3323a",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "かしこまりました。ふくろはいりますか。"
+  },
+  "drug-d7": {
+    "file": "drug-d7.mp3",
+    "hash": "e6e136606835",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "ありがとうございました！またおこしくださいませ。"
+  },
+  "station-s1": {
+    "file": "station-s1.mp3",
+    "hash": "cc897f59797b",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "あ、はい。どうしましたか。"
+  },
+  "station-s2": {
+    "file": "station-s2.mp3",
+    "hash": "45a8491410bd",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ここをまっすぐいって、みぎにまがってください。"
+  },
+  "station-s3": {
+    "file": "station-s3.mp3",
+    "hash": "26f295756e57",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "はい、そうです。ちなみに、どこへいきますか。"
+  },
+  "station-s4": {
+    "file": "station-s4.mp3",
+    "hash": "daf4f8246052",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "しんじゅくですね。えきはとてもちかいですよ。"
+  },
+  "station-s5": {
+    "file": "station-s5.mp3",
+    "hash": "416221cb37ef",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ええ、そうです。ひだりがわにかいさつがあって、のりばはにばんせんです。"
+  },
+  "station-s6": {
+    "file": "station-s6.mp3",
+    "hash": "2631aed46ed4",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "でぐちのあんないもみやすいので、すぐわかりますよ！"
+  },
+  "station-s7": {
+    "file": "station-s7.mp3",
+    "hash": "f90bd3f8e37c",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "どういたしまして！きをつけていってきてくださいね。"
+  },
+  "vocab-sumimasen": {
+    "file": "vocab-sumimasen.mp3",
+    "hash": "f41feab00f34",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "すみません"
+  },
+  "vocab-yoyaku": {
+    "file": "vocab-yoyaku.mp3",
+    "hash": "a38051cc90cc",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "よやく"
+  },
+  "vocab-namae": {
+    "file": "vocab-namae.mp3",
+    "hash": "310169794f78",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "おなまえ"
+  },
+  "vocab-passport": {
+    "file": "vocab-passport.mp3",
+    "hash": "e7f399582ae2",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "パスポート"
+  },
+  "vocab-nihaku": {
+    "file": "vocab-nihaku.mp3",
+    "hash": "9e4dc5a9139b",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "にはく"
+  },
+  "vocab-heya": {
+    "file": "vocab-heya.mp3",
+    "hash": "a4c2044bd904",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "おへや"
+  },
+  "vocab-kai": {
+    "file": "vocab-kai.mp3",
+    "hash": "dafb37767dce",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ごかい"
+  },
+  "vocab-kagi": {
+    "file": "vocab-kagi.mp3",
+    "hash": "9d7afda3b79d",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "かぎ"
+  },
+  "vocab-asagohan": {
+    "file": "vocab-asagohan.mp3",
+    "hash": "f3b203190d84",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "あさごはん"
+  },
+  "vocab-nanji": {
+    "file": "vocab-nanji.mp3",
+    "hash": "acf070b58cd0",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "なんじ"
+  },
+  "vocab-kara": {
+    "file": "vocab-kara.mp3",
+    "hash": "06581a885aaf",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "しちじから"
+  },
+  "vocab-made": {
+    "file": "vocab-made.mp3",
+    "hash": "4c13fd2dd82c",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "くじまで"
+  },
+  "vocab-onegaishimasu": {
+    "file": "vocab-onegaishimasu.mp3",
+    "hash": "48cb1289a334",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "おねがいします"
+  },
+  "vocab-wakarimashita": {
+    "file": "vocab-wakarimashita.mp3",
+    "hash": "e90b54c8f251",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "わかりました"
+  },
+  "vocab-arigatou": {
+    "file": "vocab-arigatou.mp3",
+    "hash": "42742c3892d4",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ありがとうございます"
+  },
+  "vocab-megusuri": {
+    "file": "vocab-megusuri.mp3",
+    "hash": "aa0cffb31909",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "めぐすり"
+  },
+  "vocab-kazegusuri": {
+    "file": "vocab-kazegusuri.mp3",
+    "hash": "cce9f583e449",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "かぜぐすり"
+  },
+  "vocab-hiyakedome": {
+    "file": "vocab-hiyakedome.mp3",
+    "hash": "fce7be59b725",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ひやけどめ"
+  },
+  "vocab-ikura": {
+    "file": "vocab-ikura.mp3",
+    "hash": "76767d4adb0b",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "いくら"
+  },
+  "vocab-hitotsu": {
+    "file": "vocab-hitotsu.mp3",
+    "hash": "00002bf009f8",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ひとつ"
+  },
+  "vocab-futatsu": {
+    "file": "vocab-futatsu.mp3",
+    "hash": "59db6b3c3578",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ふたつ"
+  },
+  "vocab-kudasai": {
+    "file": "vocab-kudasai.mp3",
+    "hash": "4229392c5b90",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "これをください"
+  },
+  "vocab-menzei": {
+    "file": "vocab-menzei.mp3",
+    "hash": "26950feac48a",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "めんぜい"
+  },
+  "vocab-credit-card": {
+    "file": "vocab-credit-card.mp3",
+    "hash": "4294cf564795",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "クレジットカード"
+  },
+  "vocab-harau": {
+    "file": "vocab-harau.mp3",
+    "hash": "938b52e7269b",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "はらいます"
+  },
+  "vocab-fukuro": {
+    "file": "vocab-fukuro.mp3",
+    "hash": "bbc6dea835f6",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ふくろ"
+  },
+  "vocab-daijoubu": {
+    "file": "vocab-daijoubu.mp3",
+    "hash": "3348a38414fc",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "だいじょうぶ"
+  },
+  "vocab-irimasen": {
+    "file": "vocab-irimasen.mp3",
+    "hash": "fed11b6b31d5",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "いりません"
+  },
+  "vocab-yasui": {
+    "file": "vocab-yasui.mp3",
+    "hash": "af0a76da084a",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "やすい"
+  },
+  "vocab-eki": {
+    "file": "vocab-eki.mp3",
+    "hash": "29e95898519c",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "えき"
+  },
+  "vocab-deguchi": {
+    "file": "vocab-deguchi.mp3",
+    "hash": "f38c0cb44e21",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "でぐち"
+  },
+  "vocab-shinjuku": {
+    "file": "vocab-shinjuku.mp3",
+    "hash": "7008429c2762",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "しんじゅく"
+  },
+  "vocab-densha": {
+    "file": "vocab-densha.mp3",
+    "hash": "1ff847d62bcd",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "でんしゃ"
+  },
+  "vocab-massugu": {
+    "file": "vocab-massugu.mp3",
+    "hash": "ba0c99bc190a",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "まっすぐ"
+  },
+  "vocab-migi": {
+    "file": "vocab-migi.mp3",
+    "hash": "8bb875bed851",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "みぎ"
+  },
+  "vocab-hidari": {
+    "file": "vocab-hidari.mp3",
+    "hash": "fc3e752c4b1f",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ひだり"
+  },
+  "vocab-kaisatsu": {
+    "file": "vocab-kaisatsu.mp3",
+    "hash": "381b5a4a2926",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "かいさつ"
+  },
+  "vocab-noriba": {
+    "file": "vocab-noriba.mp3",
+    "hash": "d3ccda9b567f",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "のりば"
+  },
+  "vocab-aruite": {
+    "file": "vocab-aruite.mp3",
+    "hash": "d472941dc7d2",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "あるいて"
+  },
+  "vocab-gofun": {
+    "file": "vocab-gofun.mp3",
+    "hash": "e0c26deecc99",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ごふん"
+  },
+  "vocab-doko": {
+    "file": "vocab-doko.mp3",
+    "hash": "3bb505baae9d",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "どこ"
+  },
+  "vocab-iku": {
+    "file": "vocab-iku.mp3",
+    "hash": "5d0e2b655d0f",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "いきます"
+  },
+  "vocab-koko": {
+    "file": "vocab-koko.mp3",
+    "hash": "700a0e383719",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ここ"
+  },
+  "vocab-chikai": {
+    "file": "vocab-chikai.mp3",
+    "hash": "7769387019ed",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ちかい"
+  },
+  "hotel-h5a": {
+    "file": "hotel-h5a.mp3",
+    "hash": "1dfc3856fc81",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "むりょうワイファイのパスワードはへやのかみにかいてありますよ。"
+  },
+  "hotel-h5b": {
+    "file": "hotel-h5b.mp3",
+    "hash": "afbaa227c568",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "はい、ワイファイはへやにかいてあります。ほかになにかありますか。"
+  },
+  "drug-d6a": {
+    "file": "drug-d6a.mp3",
+    "hash": "0ca604b65ede",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "あ、パスポートもみせてくださいね。"
+  },
+  "drug-d6b": {
+    "file": "drug-d6b.mp3",
+    "hash": "6d0b88e86d15",
+    "voice": "ja-JP-KeitaNeural",
+    "text": "はい、ゆっくりでだいじょうぶですよ。ほかになにかありますか。"
+  },
+  "station-s6a": {
+    "file": "station-s6a.mp3",
+    "hash": "4d6f56d72a58",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "あ、きゅうこうだとつぎがしんじゅくなんですけど、かくえきていしゃだとみっつめですよ！"
+  },
+  "station-s6b": {
+    "file": "station-s6b.mp3",
+    "hash": "dd4b288eac69",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ごめんなさい、はやかったですよね！きゅうこうにのるとはやいですよ。"
+  },
+  "vocab-mou-ichido": {
+    "file": "vocab-mou-ichido.mp3",
+    "hash": "9955e5422db2",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "もういちど"
+  },
+  "vocab-nimotsu": {
+    "file": "vocab-nimotsu.mp3",
+    "hash": "9445482cfd1e",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "にもつ"
+  },
+  "vocab-azukeru": {
+    "file": "vocab-azukeru.mp3",
+    "hash": "d559c61be265",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "あずける"
+  },
+  "vocab-chotto-matte": {
+    "file": "vocab-chotto-matte.mp3",
+    "hash": "814e34f45ac2",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ちょっとまってください"
+  },
+  "vocab-shashin": {
+    "file": "vocab-shashin.mp3",
+    "hash": "5fd690200fd6",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "しゃしん"
+  },
+  "vocab-toru": {
+    "file": "vocab-toru.mp3",
+    "hash": "2b5b1f712ee9",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "とる"
+  },
+  "vocab-mou-sukoshi": {
+    "file": "vocab-mou-sukoshi.mp3",
+    "hash": "db1b0c898341",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "もうすこし"
+  },
+  "vocab-yukkuri": {
+    "file": "vocab-yukkuri.mp3",
+    "hash": "abcd1f9abe51",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "ゆっくり"
+  },
+  "vocab-hanasu": {
+    "file": "vocab-hanasu.mp3",
+    "hash": "c63611883ad7",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "はなす"
+  },
+  "vocab-tasukarimashita": {
+    "file": "vocab-tasukarimashita.mp3",
+    "hash": "d00d82efcfaf",
+    "voice": "ja-JP-NanamiNeural",
+    "text": "たすかりました"
+  }
+}
