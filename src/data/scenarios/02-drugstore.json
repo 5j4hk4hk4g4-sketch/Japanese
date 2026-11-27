@@ -157,11 +157,13 @@
       "npcTokens": [
         { "text": "はい、" },
         { "text": "日焼け止め", "reading": "ひやけどめ", "vocabId": "hiyakedome" },
-        { "text": "もいっしょにどうぞ。" },
+        { "text": "もご" },
+        { "text": "一緒", "reading": "いっしょ" },
+        { "text": "ですね。" },
         { "text": "レジへどうぞ。" }
       ],
-      "npcZh": "好的，防曬乳也幫您一起算。請往結帳櫃檯。",
-      "ttsText": "はい、ひやけどめもいっしょにどうぞ。レジへどうぞ。",
+      "npcZh": "好的，防曬乳也一起結帳，對吧？請往結帳櫃檯。",
+      "ttsText": "はい、ひやけどめもごいっしょですね。レジへどうぞ。",
       "audioId": "drug-d4",
       "nextNodeId": "d5",
       "challenge": {
@@ -260,12 +262,10 @@
             "tokens": [
               { "text": "いいえ、" },
               { "text": "大丈夫", "reading": "だいじょうぶ", "vocabId": "daijoubu" },
-              { "text": "です。" },
-              { "text": "いりません", "vocabId": "irimasen" },
-              { "text": "。" }
+              { "text": "です。" }
             ],
             "correct": true,
-            "feedbackZh": "100 分！講「大丈夫です」或「いりません」店員馬上秒懂。",
+            "feedbackZh": "100 分！婉拒購物袋時自然說「いいえ、大丈夫です」（不用了，謝謝）最道地，不會有重複拒絕的生硬感。",
             "nextNodeId": "d6a"
           },
           {

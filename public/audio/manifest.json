@@ -55,9 +55,9 @@
   },
   "drug-d4": {
     "file": "drug-d4.mp3",
-    "hash": "024c289c9be1",
+    "hash": "84150dcd48d4",
     "voice": "ja-JP-KeitaNeural",
-    "text": "はい、ひやけどめもいっしょにどうぞ。レジへどうぞ。"
+    "text": "はい、ひやけどめもごいっしょですね。レジへどうぞ。"
   },
   "drug-d5": {
     "file": "drug-d5.mp3",
@@ -103,9 +103,9 @@
   },
   "station-s5": {
     "file": "station-s5.mp3",
-    "hash": "416221cb37ef",
+    "hash": "5638ff383ae1",
     "voice": "ja-JP-NanamiNeural",
-    "text": "ええ、そうです。ひだりがわにかいさつがあって、のりばはにばんせんです。"
+    "text": "ええ、そうです。ひだりがわにかいさつがありますよ。しんじゅくへはちゅうおうせんがべんりですよ。"
   },
   "station-s6": {
     "file": "station-s6.mp3",
@@ -115,9 +115,9 @@
   },
   "station-s7": {
     "file": "station-s7.mp3",
-    "hash": "f90bd3f8e37c",
+    "hash": "d917b537a420",
     "voice": "ja-JP-NanamiNeural",
-    "text": "どういたしまして！きをつけていってきてくださいね。"
+    "text": "どういたしまして！きをつけていってくださいね。"
   },
   "vocab-sumimasen": {
     "file": "vocab-sumimasen.mp3",
@@ -391,9 +391,9 @@
   },
   "hotel-h5b": {
     "file": "hotel-h5b.mp3",
-    "hash": "afbaa227c568",
+    "hash": "3c4728db0937",
     "voice": "ja-JP-NanamiNeural",
-    "text": "はい、ワイファイはへやにかいてあります。ほかになにかありますか。"
+    "text": "はい、ワイファイのパスワードはへやのあんないにかいてあります。ほかになにかありますか。"
   },
   "drug-d6a": {
     "file": "drug-d6a.mp3",
@@ -409,15 +409,15 @@
   },
   "station-s6a": {
     "file": "station-s6a.mp3",
-    "hash": "4d6f56d72a58",
+    "hash": "f894a860e4be",
     "voice": "ja-JP-NanamiNeural",
-    "text": "あ、きゅうこうだとつぎがしんじゅくなんですけど、かくえきていしゃだとみっつめですよ！"
+    "text": "あ、ちゅうおうせんのかいそくにのるとすぐしんじゅくにつきますよ。オレンジいろのでんしゃなのでのりばのあんないをみてくださいね！"
   },
   "station-s6b": {
     "file": "station-s6b.mp3",
-    "hash": "dd4b288eac69",
+    "hash": "f7967d28d0dc",
     "voice": "ja-JP-NanamiNeural",
-    "text": "ごめんなさい、はやかったですよね！きゅうこうにのるとはやいですよ。"
+    "text": "ごめんなさい、はやかったですよね！オレンジいろのちゅうおうせんにのるとべんりですよ。"
   },
   "vocab-mou-ichido": {
     "file": "vocab-mou-ichido.mp3",

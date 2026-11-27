@@ -67,13 +67,14 @@
             "id": "opt1",
             "tokens": [
               { "text": "予約", "reading": "よやく", "vocabId": "yoyaku" },
-              { "text": "した" },
+              { "text": "している" },
               { "text": "田中", "reading": "たなか" },
-              { "text": "です。" },
-              { "text": "どうぞ。" }
+              { "text": "です。こちらが" },
+              { "text": "パスポート", "vocabId": "passport" },
+              { "text": "です。" }
             ],
             "correct": true,
-            "feedbackZh": "太棒了！「予約した〇〇です」是報上訂房姓名的超實用句型。",
+            "feedbackZh": "太棒了！「予約している〇〇です。こちらがパスポートです。」報上訂房大名並遞出護照，自然又明確！",
             "nextNodeId": "h3"
           },
           {
@@ -300,13 +301,15 @@
       "speakerVoice": "nanami",
       "expression": "smile",
       "npcTokens": [
-        { "text": "はい、Wi-Fiは" },
+        { "text": "はい、Wi-Fiのパスワードは" },
         { "text": "部屋", "reading": "へや", "vocabId": "heya" },
+        { "text": "の" },
+        { "text": "案内", "reading": "あんない" },
         { "text": "に書いてあります。" },
         { "text": "ほかに何かありますか。" }
       ],
-      "npcZh": "好的，Wi-Fi 密碼寫在房間裡喔。請問還有其他需要嗎？",
-      "ttsText": "はい、ワイファイはへやにかいてあります。ほかになにかありますか。",
+      "npcZh": "好的，Wi-Fi 密碼寫在房間的說明資料上。請問還有其他需要嗎？",
+      "ttsText": "はい、ワイファイのパスワードはへやのあんないにかいてあります。ほかになにかありますか。",
       "audioId": "hotel-h5b",
       "nextNodeId": "h6",
       "challenge": {

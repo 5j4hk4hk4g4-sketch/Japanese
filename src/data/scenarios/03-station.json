@@ -182,12 +182,16 @@
         { "text": "左", "reading": "ひだり", "vocabId": "hidari" },
         { "text": "側に" },
         { "text": "改札", "reading": "かいさつ", "vocabId": "kaisatsu" },
-        { "text": "があって、" },
-        { "text": "乗り場", "reading": "のりば", "vocabId": "noriba" },
-        { "text": "は二番線です。" }
+        { "text": "がありますよ。" },
+        { "text": "新宿", "reading": "しんじゅく", "vocabId": "shinjuku" },
+        { "text": "へは" },
+        { "text": "中央線", "reading": "ちゅうおうせん" },
+        { "text": "が" },
+        { "text": "便利", "reading": "べんり" },
+        { "text": "ですよ。" }
       ],
-      "npcZh": "對的，左邊有剪票口，乘車處在二號月台。",
-      "ttsText": "ええ、そうです。ひだりがわにかいさつがあって、のりばはにばんせんです。",
+      "npcZh": "對的，左邊有剪票口喔。去新宿的話，搭中央線很方便喔。",
+      "ttsText": "ええ、そうです。ひだりがわにかいさつがありますよ。しんじゅくへはちゅうおうせんがべんりですよ。",
       "audioId": "station-s5",
       "nextNodeId": "s6",
       "challenge": {
@@ -273,17 +277,19 @@
       "expression": "thinking",
       "npcTokens": [
         { "text": "あ、" },
-        { "text": "急行", "reading": "きゅうこう" },
-        { "text": "だと" },
-        { "text": "次", "reading": "つぎ" },
-        { "text": "が" },
+        { "text": "中央線", "reading": "ちゅうおうせん" },
+        { "text": "の" },
+        { "text": "快速", "reading": "かいそく" },
+        { "text": "に乗るとすぐ" },
         { "text": "新宿", "reading": "しんじゅく", "vocabId": "shinjuku" },
-        { "text": "なんですけど、" },
-        { "text": "各駅停車", "reading": "かくえきていしゃ" },
-        { "text": "だと三つ目ですよ！" }
+        { "text": "に着きますよ。オレンジ色の" },
+        { "text": "電車", "reading": "でんしゃ", "vocabId": "densha" },
+        { "text": "なので" },
+        { "text": "乗り場", "reading": "のりば", "vocabId": "noriba" },
+        { "text": "の案内を見てくださいね！" }
       ],
-      "npcZh": "啊，如果是搭急行下一站就是新宿，但各站皆停的話是第三站喔！",
-      "ttsText": "あ、きゅうこうだとつぎがしんじゅくなんですけど、かくえきていしゃだとみっつめですよ！",
+      "npcZh": "啊，搭中央線快速很快就能到新宿喔。是橘色的電車，請看乘車處的標示喔！",
+      "ttsText": "あ、ちゅうおうせんのかいそくにのるとすぐしんじゅくにつきますよ。オレンジいろのでんしゃなのでのりばのあんないをみてくださいね！",
       "audioId": "station-s6a",
       "nextNodeId": "s6b",
       "challenge": {
@@ -310,14 +316,14 @@
       "npcTokens": [
         { "text": "ごめんなさい、" },
         { "text": "早", "reading": "はや" },
-        { "text": "かったですよね！" },
-        { "text": "急行", "reading": "きゅうこう" },
+        { "text": "かったですよね！オレンジ色の" },
+        { "text": "中央線", "reading": "ちゅうおうせん" },
         { "text": "に乗ると" },
-        { "text": "早", "reading": "はや" },
-        { "text": "いですよ。" }
+        { "text": "便利", "reading": "べんり" },
+        { "text": "ですよ。" }
       ],
-      "npcZh": "抱歉我剛剛講太快了！搭急行列車比較快喔。",
-      "ttsText": "ごめんなさい、はやかったですよね！きゅうこうにのるとはやいですよ。",
+      "npcZh": "抱歉我剛剛講太快了！搭橘色的中央線很方便喔。",
+      "ttsText": "ごめんなさい、はやかったですよね！オレンジいろのちゅうおうせんにのるとべんりですよ。",
       "audioId": "station-s6b",
       "nextNodeId": "s7",
       "challenge": {
@@ -364,10 +370,10 @@
       "expression": "happy",
       "npcTokens": [
         { "text": "どういたしまして！" },
-        { "text": "気をつけて行ってきてくださいね。" }
+        { "text": "気をつけて行ってくださいね。" }
       ],
-      "npcZh": "不客氣！路上小心、玩得開心喔！",
-      "ttsText": "どういたしまして！きをつけていってきてくださいね。",
+      "npcZh": "不客氣！路上小心喔！",
+      "ttsText": "どういたしまして！きをつけていってくださいね。",
       "audioId": "station-s7",
       "isEnd": true
     }
